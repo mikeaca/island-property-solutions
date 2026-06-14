@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why choose Island Property Solutions? 50+ properties, €2.3M income, 99% satisfaction, 24/7 support.">
+    <title>Why Island Property Solutions | Trusted Property Management Malta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #061C31; --navy-mid: #0a2540; --gold: #C9A84C; --gold-light: #E0C270; --cream: #F8F4EC; --page: #F2EFE8; --muted: #666666; --light: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--navy); background: var(--page); }
+        header { background: var(--navy); color: var(--light); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo-svg { text-decoration: none; }
+        .logo-svg svg { width: 140px; }
+        nav { display: flex; gap: 2rem; }
+        nav a { color: var(--light); text-decoration: none; }
+        .cart-icon { position: relative; font-size: 1.3rem; }
+        .cart-count { position: absolute; top: -8px; right: -12px; background: var(--gold); color: var(--navy); border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; }
+        .cta-button { background: var(--gold); color: var(--navy); padding: 0.7rem 1.8rem; border-radius: 5px; font-weight: bold; text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .page-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--light); padding: 2.5rem 2rem; text-align: center; }
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900; }
+        section { padding: 2.5rem 0; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--navy); border-bottom: 3px solid var(--gold); padding-bottom: 0.8rem; font-weight: 900; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .stat-card { background: var(--light); padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid var(--gold); }
+        .stat-number { font-size: 2.5rem; color: var(--gold); font-weight: bold; font-family: 'Playfair Display', serif; }
+        .stat-label { color: var(--muted); font-size: 0.95rem; margin-top: 0.5rem; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .testimonial-card { background: var(--light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold); }
+        .stars { color: var(--gold); font-size: 1rem; margin-bottom: 0.5rem; }
+        .testimonial-text { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; font-style: italic; }
+        .testimonial-author { color: var(--gold); font-weight: bold; }
+        .cta-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--light); padding: 2rem; border-radius: 8px; text-align: center; }
+        .cta-box h3 { margin-bottom: 0.8rem; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 900; }
+        footer { background: var(--navy); color: var(--light); text-align: center; padding: 2rem; }
+        footer a { color: var(--gold); }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav { flex-direction: column; width: 100%; }
+            .page-header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-svg">
+                <svg viewBox="0 0 260 68" width="160" height="40">
+                    <path d="M14,22 C28,12 38,32 56,22 C74,12 84,32 102,22 C120,12 130,32 148,22 C158,16 166,13 176,15" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                    <text x="128" y="48" text-anchor="middle" font-family="'Playfair Display',serif" font-size="24" font-weight="900" letter-spacing="4" fill="#C9A84C">ISLAND</text>
+                    <line x1="36" y1="56" x2="220" y2="56" stroke="#C9A84C" stroke-width="0.5" opacity="0.18"/>
+                    <text x="128" y="65" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" font-weight="300" letter-spacing="3.5" fill="#C9A84C" opacity="0.4">PROPERTY SOLUTIONS</text>
+                </svg>
+            </a>
+            <nav>
+                <a href="services.html">Services</a>
+                <a href="shop.html">Shop</a>
+                <a href="why-us.html">Why Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="shop.html" class="cart-icon">🛒 <span class="cart-count" id="cart-count">0</span></a>
+                <a href="contact.html" class="cta-button">Get Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Why Malta Property Owners Choose Us</h1>
+            <p>Trusted by 50+ property owners</p>
+        </div>
+    </section>
+
+    <section style="background: var(--cream);">
+        <div class="container">
+            <h2 class="section-title">Our Track Record</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Properties Managed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">€2.3M+</div>
+                    <div class="stat-label">Income Generated</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Guest Satisfaction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--light);">
+        <div class="container">
+            <h2 class="section-title">What Property Owners Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">"My income increased 18% in the first year. Professional and trustworthy."</div>
+                    <div class="testimonial-author">James P. — Sliema</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">"They handle everything. I just receive income reports."</div>
+                    <div class="testimonial-author">Robert M. — Birkirkara</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">"Response to guest issues was immediate and professional."</div>
+                    <div class="testimonial-author">David B. — St. Julian's</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--cream);">
+        <div class="container">
+            <div class="cta-box">
+                <h3>Ready to Work With Us?</h3>
+                <p>Get a free property consultation.</p>
+                <a href="contact.html" class="cta-button">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Island Property Solutions.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><a href="sitemap.xml">Sitemap</a></p>
+    </footer>
+
+    <script>
+        function getCart() { try { return JSON.parse(localStorage.getItem('cart')) || []; } catch (e) { return []; } }
+        function updateCartCount() { const cart = getCart(); const count = cart.reduce((total, item) => total + item.quantity, 0); document.getElementById('cart-count').textContent = count; }
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', updateCartCount); } else { updateCartCount(); }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</body>
+</html>

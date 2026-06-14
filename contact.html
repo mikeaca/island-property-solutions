@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Island Property Solutions for property management services in Malta.">
+    <title>Contact - Island Property Solutions | Get Free Consultation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #061C31; --navy-mid: #0a2540; --gold: #C9A84C; --gold-light: #E0C270; --cream: #F8F4EC; --page: #F2EFE8; --muted: #666666; --light: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--navy); background: var(--page); }
+        header { background: var(--navy); color: var(--light); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo-svg { text-decoration: none; }
+        .logo-svg svg { width: 140px; }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a { color: var(--light); text-decoration: none; }
+        .cart-icon { position: relative; font-size: 1.3rem; }
+        .cart-count { position: absolute; top: -8px; right: -12px; background: var(--gold); color: var(--navy); border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; }
+        .cta-button { background: var(--gold); color: var(--navy); padding: 0.7rem 1.8rem; border-radius: 5px; font-weight: bold; text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .page-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--light); padding: 2.5rem 2rem; text-align: center; }
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900; }
+        section { padding: 2.5rem 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .contact-box { background: var(--cream); padding: 2rem; border-radius: 8px; }
+        .contact-box h3 { color: var(--gold); margin-bottom: 1.5rem; font-size: 1.3rem; font-family: 'Playfair Display', serif; font-weight: 700; }
+        .contact-item { margin-bottom: 1.5rem; }
+        .contact-label { color: var(--gold); font-weight: bold; margin-bottom: 0.3rem; }
+        .contact-value { color: var(--muted); font-size: 1rem; }
+        .contact-value a { color: var(--gold); text-decoration: none; }
+        .form-box { background: var(--light); padding: 2rem; border-radius: 8px; border: 2px solid var(--cream); }
+        .form-box h3 { color: var(--gold); margin-bottom: 1.5rem; font-size: 1.3rem; font-family: 'Playfair Display', serif; font-weight: 700; }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; margin-bottom: 0.4rem; font-weight: bold; font-size: 0.9rem; }
+        input, textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--cream); border-radius: 5px; font-family: inherit; }
+        textarea { resize: vertical; min-height: 100px; }
+        .submit-btn { background: var(--navy); color: var(--light); padding: 1rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; }
+        .submit-btn:hover { background: var(--gold); color: var(--navy); }
+        .response-message { padding: 1rem; border-radius: 5px; margin-bottom: 1rem; display: none; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .response-message.show { display: block; }
+        .trust-box { background: #f0f8ff; padding: 1.5rem; border-radius: 8px; border: 2px solid var(--gold); text-align: center; margin: 2rem 0; }
+        .trust-box h3 { color: var(--gold); margin-bottom: 0.8rem; font-size: 1.3rem; font-family: 'Playfair Display', serif; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .faq-item { background: var(--light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold); }
+        .faq-question { color: var(--gold); font-weight: bold; margin-bottom: 0.8rem; font-family: 'Playfair Display', serif; }
+        .faq-answer { color: var(--muted); font-size: 0.9rem; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--navy); border-bottom: 3px solid var(--gold); padding-bottom: 0.8rem; font-weight: 900; }
+        footer { background: var(--navy); color: var(--light); text-align: center; padding: 2rem; }
+        footer a { color: var(--gold); }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav { flex-direction: column; width: 100%; }
+            .page-header h1 { font-size: 1.8rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-svg">
+                <svg viewBox="0 0 260 68" width="160" height="40">
+                    <path d="M14,22 C28,12 38,32 56,22 C74,12 84,32 102,22 C120,12 130,32 148,22 C158,16 166,13 176,15" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                    <text x="128" y="48" text-anchor="middle" font-family="'Playfair Display',serif" font-size="24" font-weight="900" letter-spacing="4" fill="#C9A84C">ISLAND</text>
+                    <line x1="36" y1="56" x2="220" y2="56" stroke="#C9A84C" stroke-width="0.5" opacity="0.18"/>
+                    <text x="128" y="65" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" font-weight="300" letter-spacing="3.5" fill="#C9A84C" opacity="0.4">PROPERTY SOLUTIONS</text>
+                </svg>
+            </a>
+            <nav>
+                <a href="services.html">Services</a>
+                <a href="shop.html">Shop</a>
+                <a href="why-us.html">Why Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="shop.html" class="cart-icon">🛒 <span class="cart-count" id="cart-count">0</span></a>
+                <a href="contact.html" class="cta-button">Get Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Get Your Free Property Consultation</h1>
+            <p>No obligation. No pressure. Just honest advice.</p>
+        </div>
+    </section>
+
+    <section style="background: var(--light);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">📧 Email</span>
+                        <div class="contact-value">
+                            <a href="mailto:hello@islandpropertysolutions.com.mt">hello@islandpropertysolutions.com.mt</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📞 Phone</span>
+                        <div class="contact-value">
+                            <a href="tel:+35621311234">+356 2131 1234</a><br>
+                            <small style="color: var(--muted);">Mon-Fri: 9 AM - 6 PM</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📍 Location</span>
+                        <div class="contact-value">
+                            Valletta, Malta<br>
+                            <small style="color: var(--muted);">Serving all of Malta</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-box">
+                    <h3>Send us a Message</h3>
+                    <div id="response-message" class="response-message">Thank you! We'll be in touch within 2 hours.</div>
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="trust-box">
+                <h3>We Respond Quickly</h3>
+                <p><strong style="color: var(--gold); font-size: 1.2rem;">Same-day responses</strong></p>
+                <p>Average response time: <strong>2 hours</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--cream);">
+        <div class="container">
+            <h2 class="section-title">Quick Questions?</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">How much does your service cost?</div>
+                    <div class="faq-answer">15% commission on short-let income. No upfront fees. We earn when you earn.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you manage properties outside Valletta?</div>
+                    <div class="faq-answer">Yes, we serve all of Malta. Local expertise across the entire island.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if I'm not sure what service I need?</div>
+                    <div class="faq-answer">Perfect. Schedule a free consultation and we'll recommend the best option.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Island Property Solutions.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><a href="sitemap.xml">Sitemap</a></p>
+    </footer>
+
+    <script>
+        function getCart() { try { return JSON.parse(localStorage.getItem('cart')) || []; } catch (e) { return []; } }
+        function updateCartCount() { const cart = getCart(); const count = cart.reduce((total, item) => total + item.quantity, 0); document.getElementById('cart-count').textContent = count; }
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', updateCartCount); } else { updateCartCount(); }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</body>
+</html>
